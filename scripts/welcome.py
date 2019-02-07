@@ -129,11 +129,12 @@ def update(force=False):
             return
     release = get_release()
     if release.endswith("dev") or release == "2.2":
-        ret = os.system("curl https://raw.githubusercontent.com/GNS3/gns3-vm/unstable/scripts/update_{}.sh > /tmp/update.sh && bash -x /tmp/update.sh".format(release))
+        ret = os.system("curl https://raw.githubusercontent.com/RyanBreaker/gns3-vm/unstable/scripts/update_2.1.sh > /tmp/update.sh && bash -x /tmp/update.sh".format(release))
     else:
-        ret = os.system("curl https://raw.githubusercontent.com/GNS3/gns3-vm/master/scripts/update_{}.sh > /tmp/update.sh && bash -x /tmp/update.sh".format(release))
+        ret = os.system("curl https://raw.githubusercontent.com/RyanBreaker/gns3-vm/master/scripts/update_2.1.sh > /tmp/update.sh && bash -x /tmp/update.sh".format(release))
     if ret != 0:
         print("ERROR DURING UPGRADE PROCESS PLEASE TAKE A SCREENSHOT IF YOU NEED SUPPORT")
+        print("fooooo")
         time.sleep(15)
 
 
