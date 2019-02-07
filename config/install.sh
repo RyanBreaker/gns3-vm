@@ -42,7 +42,7 @@ then
     apt-get update
     apt-get install -y software-properties-common
 fi
-
+echo "!!!HERE!!!"
 # Use sudo -E in case there is a proxy config
 sudo -E add-apt-repository -y ppa:gns3/qemu
 
